@@ -1,0 +1,106 @@
+COP :
+
+clc
+clf
+clear all
+close all
+m=285;%mass
+g=9.81;
+w1=m*g;
+tf=1.2;%front track width
+tr=1.15;%rear track width 
+H=0.265;h=0.265;%CG to roll axis height
+cg_bias=0.47;%weight distbn
+l=1.6;%wheelbase
+kdes=0.80; %Desired Roll gradient
+kfit=(m*g*H)/kdes; %Desired Total Roll stiffness
+cop_bias=linspace(0,1,3000);
+a=l*(1-cg_bias);
+b=l-a;
+mf=m*cg_bias;mr=m*(1-cg_bias);
+zf=0.030;zr=0.045;
+kfif=0.51*kfit;
+kfir=kfit-kfif; 
+ay=linspace(0,3*g,3000);
+r=9;kc=1400;df=H-zf;dr=H-zr;
+    for i=1:length(cop_bias)
+    for j=1:length(ay)
+        v(j)=sqrt(ay(j)*r);
+        fa(j)=1.967*v(j)^2;
+lf(i,j)=ay(j)*(m/tf)*((H*kfif)/kfit+(b/l)*zf); %Front Axle
+lr(i,j)=ay(j)*(m/tr)*((H*kfir)/kfit+(a/l)*zr); %Rear Axle 
+wfi(i,j)=mf*g/2-lf(i,j)+fa(j)*(1-cop_bias(i))/2;
+wri(i,j)=mr*g/2-lr(i,j)+fa(j)*(cop_bias(i))/2;
+if wfi(i,j)<=0 || wri(i,j)<=0
+    v1(i)=v(j);
+    ay1(i)=v1(i)^2/r;
+    break
+end
+    end
+   %  legend{i}=['cop_bias= ',num2str(cop_bias(i))]
+    end
+hold on
+grid on
+plot(cop_bias,ay1/g)
+
+ylabel('Lateral Acceleration(in g''s)')
+xlabel('COP Bias')
+title('Variation of Max Lat Acc capability with COP Bias')
+hold off    
+    
+    
+Wheel Deflection:
+
+clc
+clf
+clear all
+m=280;mf=0.47*m;mr=0.53*m;
+Mr=1.0024;
+ktr=110;%N/mm
+a=0.53*1600;
+b=1600-a;
+mom=m*1*285*(1-.28)*1.6*9.8;
+ff=3.4;
+fr=2:.1:4;
+for i=(1:length(ff));
+    j=(1:length(fr));
+   krf(i)=.001*(ff(i).^2)*4*(pi^2)*mf;
+    kwf(i)=(krf(i)*ktr)./(-krf(i)+ktr);
+    ksf(i)=kwf(i)./Mr^2;%spring stiffness front total
+   krr(j)=.001*(fr(j).^2)*4*(pi^2)*mr;
+   kwr=(krr.*ktr)./(-krr+ktr);
+   ksr=kwr/Mr^2;%spring stiffness rear total  
+   theta(i,j)=mom./((krf(i)*a^2)+(krr(j)*b^2));
+    def(i,j)=theta(i,j)*b;
+end 
+hold on
+grid on
+plot(fr,def,'g')
+xlabel('Rear ride frequency ')
+ylabel(' Wheel deflection')
+title('Rear wheel deflection vs Rear ride frequency')
+hold off
+
+
+oscillation center :
+
+clc
+clf
+clear all
+kfr=  70.1427;%front spring  rate 
+kff=59.1700;%rear spring  rate 
+a=878.8;%distance of cg from front axel
+b=733.2;%distance of cg from rear axel
+m=275;%mass
+I=0.336*10^6;%pitch moment of  inertia
+k=(I/m)^.5;%radius of gyration 
+kf=64.7796;%front ride rate
+kr=61.0633;%rear ride rate
+alp=(kf+kr)/2;
+beta=(kr*b-kf*a)/m;
+gamma=(kf*a^2+kf*b^2)/(m*k^2);
+om1=((alp+gamma)/2+(((alp-gamma)^2)/4+(beta/k)^2)^.5)^.5
+om2=((alp+gamma)/2-(((alp-gamma)^2)/4+(beta/k)^2)^.5)^.5
+x1=-beta/(alp-om1^2) %-ve in the answer implies behind the CG 
+x2=-beta/(alp-om2^2)
+

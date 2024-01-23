@@ -1,0 +1,38 @@
+CREATE SCHEMA IF NOT EXISTS DMA_Project;
+	Use DMA_Project;
+CREATE DATABASE IF NOT EXISTS BEAUTY_PRODUCT_SALES;
+USE BEAUTY_PRODUCT_SALES;
+CREATE TABLE IF NOT EXISTS Customer 
+(Cust_id int(7) NOT NULL, 
+Name varchar(50) NOT NULL, 
+Age int(3),
+Email varchar(50),
+Phone varchar(10) NOT NULL, 
+PRIMARY KEY (Cust_id));
+SHOW COLUMNS FROM BEAUTY_PRODUCT_SALES.Customer;
+SELECT * FROM Customer;
+ALTER TABLE Customer
+DROP COLUMN Email;
+SHOW COLUMNS FROM BEAUTY_PRODUCT_SALES.Customer;
+ALTER TABLE Customer
+MODIFY Phone varchar(15);
+DESCRIBE Customer;
+ALTER TABLE Customer
+MODIFY Phone varchar(15) NOT NULL;
+DESCRIBE Customer;
+SELECT * FROM BEAUTY_PRODUCT_SALES.Customer;
+USE BEAUTY_PRODUCT_SALES;
+TRUNCATE Customer;
+SELECT * FROM Customer
+WHERE Name like "%Robbie%";
+CREATE TABLE IF NOT EXISTS Company
+(C_Name varchar(50) NOT NULL, 
+Location varchar(200) NOT NULL,
+Contact INT,
+Web_Site varchar(200) NOT NULL, 
+PRIMARY KEY (C_Name));
+DESCRIBE Company;
+SHOW TABLES;
+ALTER TABLE Customer
+ADD Cust_Type varchar(15);
+SELECT * FROM Customer;
