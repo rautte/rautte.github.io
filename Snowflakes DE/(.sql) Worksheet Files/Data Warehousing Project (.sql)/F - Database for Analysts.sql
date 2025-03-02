@@ -1,0 +1,3 @@
+CREATE OR REPLACE DATABASE Data_Analyst_Processed;
+
+CREATE OR REPLACE SCHEMA Data_Analyst_Processed.ETFS
