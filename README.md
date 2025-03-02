@@ -1,18 +1,39 @@
 # Tejas Rajendra Raut
 
-I am a 2023 Master of Science graduate from Northeastern University in Engineering Management with a specialization in Data Analytics. I have successfully completed various courses and projects in the field of Finance/Economics, Data Science, Database Management, and Probiblity and Statistics. 
+## Data Engineer | Cloud & Big Data Enthusiast | Business Intelligence
 
-I am thrilled to have the opportunity to introduce myself as a skilled and innovative business/data analyst who is driven by a genuine passion for uncovering hidden insights and empowering strategic decision-making. With 2 years of experience in optimizing finance workflows, developing and monitoring KPIs, and delivering precise investment assessments, my track record captures accomplishments such as a remarkable 20% reduction in financial risk. 
+I am a Data Engineer with experience in designing and optimizing cloud-based data pipelines, database management, and business intelligence. 
 
-Beyond my analytical prowess, I am a strategic thinker with a creative flair. Armed with advanced tools like Tableau, Python, Javascript, Matlab, Minitab, and Excel, I have the ability to transform raw data into captivating visualizations and actionable insights. By embracing cutting-edge technologies such as robotic process automation (RPA) and harnessing the power of the Internet of Things (IoT), I have successfully steered organizations towards cost savings and efficiency gains, all while leaving a lasting impact on their bottom line.
+### 📌 About Me
+- 🎓 **Education:** 
+  - Master of Science in Engineering Management (Database Management) - **Northeastern University**
+  - Bachelor of Technology in Mechanical Engineering - **Vellore Institute of Technology**
+- 💡 **Expertise:** 
+  - Cloud-based **ETL pipeline development** (AWS, Azure)
+  - **Database management & optimization** (PostgreSQL, MySQL, MongoDB, Snowflake)
+  - **Big Data technologies** (Spark, Hive, Databricks, Airflow)
+  - **Data visualization & analytics** (Power BI, Tableau, Python - Matplotlib/Seaborn)
+- 🚀 **Recent Work:**
+  - Built an **AWS-based OpenSearch ingestion pipeline** processing 90M+ records monthly
+  - Migrated on-premises data infrastructure to **Azure Cloud**, reducing query times by **35%**
+  - Developed financial models reducing **credit & operational risk by 20%**
+- 📫 **Contact:** [LinkedIn](https://www.linkedin.com/in/tejas-raut/) | [GitHub](https://github.com/rautte) | [Portfolio](https://rautte.github.io)
 
-With an on-going CFA certification and an Applied degree program in Data Science and Business Analytics from Massachusetts Institute of Technology, complemented by certifications in Lean-Six Sigma Green Belt, Tableau and AWS Data Analytics, I bring a unique blend of technical expertise and strategic acumen to every endeavor.
+## 🔧 Technical Skills
+- **Programming Languages:** Python, SQL, Scala, Java, JavaScript
+- **Databases & Big Data:** PostgreSQL, MySQL, MongoDB, Snowflake, Apache Airflow, Spark, Hive
+- **Cloud Platforms:** AWS, Azure, Databricks
+- **Data Visualization:** Power BI, Tableau, Microsoft Excel
+- **Web Technologies:** Node.js, Express.js, Angular, HTML/CSS
 
-Thank you for your time.
+## 📂 Featured Projects
+- **[Formula-1 Data Reporting](#)**
+  - Built an ETL pipeline to ingest Formula-1 data from API → Transformed into Delta Lake → Created interactive **Power BI** dashboards.
+- **[Stock Price Prediction](#)**
+  - Developed **LSTM-based neural network model** for stock price forecasting using **8,000+ data points** (Python, TensorFlow).
+- **[NU Events Web Application](#)**
+  - Full-stack event registration app built with **JavaScript, Angular, Node.js** - Increased event participation by **50%**.
 
-## NOTE:
-  • File names that follow this order -> Experience-kind/professional-title/company-name <- contain some work samples if not all.
-  
-  • File name with Certifications and Achievements contains a pdf with all files merged.
-  
-  • File name Python Projects contains some extra projects in .ipynb format.
+---
+
+⭐ **Let's Connect!** Feel free to check out my repositories and collaborate on exciting data projects. 🚀
