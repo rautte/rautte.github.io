@@ -1,8 +1,8 @@
 # Tejas Rajendra Raut
 
-## Data Engineer | Cloud & Big Data Enthusiast | Business Intelligence
+## Software Engineer | Data Engineer | Cloud & Big Data Enthusiast | Business Intelligence
 
-I am a Data Engineer with experience in designing and optimizing cloud-based data pipelines, database management, and business intelligence. 
+I am a Software and Data Engineer with experience in designing and optimizing cloud-based data pipelines, database management, and business intelligence. 
 
 ### 📌 About Me
 - 🎓 **Education:** 
